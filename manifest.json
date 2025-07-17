@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Website Reminder",
+  "version": "1.0",
+  "description": "A simple reminder app for specific websites.",
+  "permissions": [
+    "storage",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "icons/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "content.css"
+      ]
+    }
+  ]
+}

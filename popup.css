@@ -1,0 +1,107 @@
+/**
+ * @file popup.css
+ * @description Styles for the extension's popup UI.
+ */
+
+body {
+  font-family: sans-serif;
+  width: 400px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-top: 0;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: calc(100% - 12px);
+  padding: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+button#save {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+button#save:hover {
+  background-color: #45a049;
+}
+
+#status {
+  text-align: center;
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+  height: 20px; /* Reserve space to prevent layout shift */
+}
+
+/* Reminder list styles */
+#reminders-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  max-height: 200px; /* Add scroll for long lists */
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+#reminders-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+#reminders-list li:last-child {
+  border-bottom: none;
+}
+
+#reminders-list span {
+  flex-grow: 1;
+  margin-right: 10px;
+  word-break: break-all; /* Prevent long URLs from overflowing */
+}
+
+#reminders-list button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+#reminders-list button:hover {
+  background-color: #d32f2f;
+}

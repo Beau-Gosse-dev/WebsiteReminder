@@ -1,0 +1,72 @@
+/**
+ * @file content.css
+ * @description Styles for the reminder modal injected into web pages.
+ */
+
+/**
+ * The backdrop creates a full-screen overlay to focus the user's attention
+ * on the reminder modal. A high z-index is used to ensure it appears above
+ * most website content.
+ */
+#website-reminder-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2147483646; /* Max z-index is 2147483647, this is just below it */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**
+ * The main reminder modal. It sits on top of the backdrop.
+ */
+#website-reminder {
+  background-color: #f44336;
+  color: white;
+  padding: 60px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 500px;
+  width: 80vw;
+  max-width: 900px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 2147483647; /* The highest possible z-index */
+}
+
+#website-reminder p {
+  margin: 0 0 30px 0;
+  font-size: 36px;
+  word-wrap: break-word; /* Ensure long messages wrap */
+}
+
+#close-reminder {
+  background-color: white;
+  color: #f44336;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+#close-reminder:hover {
+  background-color: #eee;
+}
+
+/**
+ * Styles for the close button when it is disabled during the countdown.
+ * Uses colors with high contrast for accessibility.
+ */
+#close-reminder:disabled {
+  background-color: #eeeeee;
+  color: #767676;
+  cursor: not-allowed;
+}
